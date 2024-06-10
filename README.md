@@ -17,6 +17,10 @@ SHOULD:
 - Should work on both PC and mobile
 
 COULD
+- Player adds main hero at start
 - Optionally choose additional music from HoMM2 and HoMM4
 - Provides game state rules and steps to be done in the game
 - Play simple animations from the game
+
+WON'T
+- Hero movement tracker. Both main and secondary hero
