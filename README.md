@@ -1,6 +1,6 @@
 # Heroes 3 of Might and Magic Board Game Manager
 A web application to keep track of the game state and rounds as well as dynamically play music from the PC game depending on the active player's current status. 
-I thought it would be a small, fun project to redigitalize an analogized digital game
+I thought it would be a small, fun project to redigitalize parts of an analogized digital game
 
 ## PLAN
 
