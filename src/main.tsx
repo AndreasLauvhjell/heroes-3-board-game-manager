@@ -7,7 +7,7 @@ import NavBar from './components/NavBar.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <NavBar />
+    {/* <NavBar /> */}
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <App />
     </div>

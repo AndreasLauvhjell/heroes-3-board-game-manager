@@ -1,3 +1,4 @@
+/* index.css */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,15 +12,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 html, body, #root {
@@ -36,52 +28,81 @@ body {
   background-color: #242424;
 }
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
-  height: 100%; /* Ensure it takes the full viewport height */
-  align-items: center; /* Center horizontally */
-  background-image: url('./assets/images/title.png'); /* Adjust the path if necessary */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  align-items: center;
+  position: relative; /* Necessary for positioning elements inside it */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.background-image {
+  width: 100%;
+  height: auto;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.main-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.menu-container {
+  position: absolute;
+  top: 3.1%;
+  left: 68.0%;
+  transform: translate(-50%, -50%);
+}
+
+ul.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensure items start from top-left */
+  position: absolute; /* Ensure the ul is absolutely positioned */
+  top: 0;
+  left: 0;
+}
+
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer; /* Changed from default to pointer */
+  display: flex;
+  align-items: center; /* Ensure image is centered within the button */
+}
+
+.menu-icon {
+  height: auto;
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 480px) {
+
 }
