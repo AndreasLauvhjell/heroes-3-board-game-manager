@@ -44,59 +44,6 @@ body {
   position: relative; /* Necessary for positioning elements inside it */
 }
 
-.background-image {
-  width: 100%;
-  height: auto;
-}
-
-.main-menu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-
-.menu-container {
-  position: absolute;
-  top: 3.1%;
-  left: 68.0%;
-  transform: translate(-50%, -50%);
-}
-
-ul.menu-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Ensure items start from top-left */
-  position: absolute; /* Ensure the ul is absolutely positioned */
-  top: 0;
-  left: 0;
-}
-
-li {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-button {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer; /* Changed from default to pointer */
-  display: flex;
-  align-items: center; /* Ensure image is centered within the button */
-}
-
-.menu-icon {
-  height: auto;
-  opacity: 1;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
 

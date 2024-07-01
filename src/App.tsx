@@ -1,16 +1,34 @@
 // App Component
 import React from 'react';
-import MainMenu from './views/MainMenu';
-import NavBar from './components/NavBar';
-import MenuBackground from './assets/images/title.png'
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './assets/styles/App.css';
 
+import MainMenu from './views/MainMenu';
+import CampaignMenu from './views/CampaignMenu';
+import ScenarioMenu from './views/ScenarioMenu';
+import MultiplayerMenu from './views/MultiplayerMenu';
+import Play from './views/Play';
+
+const routes = [
+  { path: '/',              element: <MainMenu/> },
+  { path: '/scenario',      element: <ScenarioMenu/> },
+  { path: '/multiplayer',   element: <MultiplayerMenu/> },
+  { path: '/campaign-roe',  element: <CampaignMenu/> }, 
+  { path: '/campaign-ab',   element: <CampaignMenu/> }, 
+  { path: '/campaign-sod',  element: <CampaignMenu/> }, 
+  { path: '/play',  element: <Play/> }, 
+]
 
 function App() {
   return (
     <div className="main-content">
-      <img src={MenuBackground} alt="Background" className="background-image"></img>
-      <MainMenu />
+      <BrowserRouter>
+        <Routes>
+          {routes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
