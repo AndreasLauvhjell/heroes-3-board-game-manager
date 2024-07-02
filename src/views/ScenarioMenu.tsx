@@ -5,6 +5,7 @@ import ScenarioBackground from '../assets/images/backgroundimages/ScenarioMenu.p
 
 import Begin from '../assets/images/icons/scenariomenu/begin.png'
 import Back from '../assets/images/icons/scenariomenu/back.png'
+import Btn from '../components/Button';
 
 function ScenarioMenu() {
   const [scenario, setScenario] = useState<Scenario | null>(null);
@@ -14,7 +15,7 @@ function ScenarioMenu() {
     if(bAction === 'back') {
       navigate('/');
     } else if (bAction === 'begin') {
-      navigate('/play')
+      navigate('/ingame')
     }
   };
 
@@ -24,14 +25,16 @@ function ScenarioMenu() {
       <div className='main-menu'>
         <div className='menu-container'>
 
-        <button className="menu-button" onClick={() => handleButtonClick('begin')}>
-          <img src={Begin} alt={Begin} className="menu-icon" />
-        </button>
-
-        <button className="menu-button" onClick={() => handleButtonClick('back')}>
-          <img src={Back} alt={Back} className="menu-icon" />
-            </button>
-          </div>
+        <Btn 
+            imgSource={Begin} 
+            onClick={() => handleButtonClick('begin')}
+        />
+        <Btn 
+            imgSource={Back} 
+            onClick={() => handleButtonClick('back')}
+        />
+        
+        </div>  
       </div>
     </>
   );

@@ -1,22 +1,25 @@
 import ButtonClick from '../assets/audio/soundEffects/global/BUTTON.mp3'
 
 interface BtnProps {
-    imgSource: string;
-    bAction?: string;  // Optional if you want to pass different actions
+    imgSource?: string;
+    id?: string;
+    onClick: (id: string, href?: string) => void;
+    href?: string;
 }
 
-const Btn: React.FC<BtnProps> = ({ imgSource }) => {
+const Btn: React.FC<BtnProps> = ({ imgSource, id, onClick, href }) => {
 
     const handleButtonClick = () => {
         const audio = new Audio(ButtonClick);
         audio.play().catch(error => {
             console.error("Error playing audio:", error);
         });
+        onClick(id, href);
     };
 
     return (
-        <button className="menu-button" onClick={() => handleButtonClick()}>
-            <img src={imgSource} alt={imgSource} className="menu-icon" />
+        <button className="menu-button" onClick={handleButtonClick}>
+            <img src={imgSource} alt="Button Icon" className="menu-icon" />
         </button>
     );
 };

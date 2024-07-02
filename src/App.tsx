@@ -16,7 +16,7 @@ const routes = [
   { path: '/campaign-roe',  element: <CampaignMenu/> }, 
   { path: '/campaign-ab',   element: <CampaignMenu/> }, 
   { path: '/campaign-sod',  element: <CampaignMenu/> }, 
-  { path: '/ingame',          element: <Ingame/> }, 
+  { path: '/ingame',        element: <Ingame/> }, 
 ]
 
 function App() {

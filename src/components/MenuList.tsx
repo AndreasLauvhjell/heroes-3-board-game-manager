@@ -14,6 +14,7 @@ import Back from '../assets/images/icons/mainmenu/Back.png';
 import Quit from '../assets/images/icons/mainmenu/Quit.png';
 
 import { useNavigate } from 'react-router-dom';
+import Btn from './Button';
 
 const initialMenu = [
   { id: 'singleplayer', img: Singleplayer, alt: 'Singleplayer' },
@@ -28,9 +29,9 @@ const singleplayerOptions = [
 ];
 
 const campaignOptions = [
-  { id: 'roe', img: RoE, alt: 'Scenario', href:'/campaign-roe' },
-  { id: 'ab', img: AB, alt: 'Campaign', href:'/campaign-ab' },
-  { id: 'sod', img: SoD, alt: 'Back', href:'/campaign-sod' },
+  { id: 'roe', img: RoE, alt: 'Restoration of Erathia', href:'/campaign-roe' },
+  { id: 'ab', img: AB, alt: 'Armageddon\'s Blade', href:'/campaign-ab' },
+  { id: 'sod', img: SoD, alt: 'Shadow of Death', href:'/campaign-sod' },
   { id: 'back', img: Back, alt: 'Back' }
 ];
 
@@ -55,9 +56,12 @@ function MenuList() {
     <ul className="menu-list">
       {menuItems.map((item) => (
         <li key={item.id}>
-          <button className="menu-button" onClick={() => handleButtonClick(item.id, item.href)}>
-            <img src={item.img} alt={item.alt} className="menu-icon" />
-          </button>
+          <Btn 
+            imgSource={item.img } 
+            id ={item.id }
+            href={item.href} 
+            onClick={handleButtonClick} 
+          />
         </li>
       ))}
     </ul>
