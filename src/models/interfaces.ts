@@ -56,6 +56,7 @@ interface Event {
     name: string;
     specialty: Specialty;
     startingSkill: Skill;
+    level: Level;
   }
 
   interface Specialty {
@@ -67,3 +68,12 @@ interface Event {
     name: string;
     description: string;
   }
+
+  interface Level {
+    level: number;
+    maxHandLimit: number;
+    expertActions: number;
+    specialtyCards: number;
+  }
+
+

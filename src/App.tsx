@@ -7,7 +7,7 @@ import MainMenu from './views/MainMenu';
 import CampaignMenu from './views/CampaignMenu';
 import ScenarioMenu from './views/ScenarioMenu';
 import MultiplayerMenu from './views/MultiplayerMenu';
-import Play from './views/Play';
+import Ingame from './views/Ingame';
 
 const routes = [
   { path: '/',              element: <MainMenu/> },
@@ -16,7 +16,7 @@ const routes = [
   { path: '/campaign-roe',  element: <CampaignMenu/> }, 
   { path: '/campaign-ab',   element: <CampaignMenu/> }, 
   { path: '/campaign-sod',  element: <CampaignMenu/> }, 
-  { path: '/play',  element: <Play/> }, 
+  { path: '/ingame',          element: <Ingame/> }, 
 ]
 
 function App() {
