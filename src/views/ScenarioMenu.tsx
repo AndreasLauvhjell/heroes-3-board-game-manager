@@ -1,7 +1,7 @@
 // CampaignMenu Component
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ScenarioBackground from '../assets/images/backgroundimages/ScenarioMenu.png'
+import ScenarioBackground from '../assets/images/backgroundimages/scenario/ScenarioMenu.png'
 
 import Begin from '../assets/images/icons/scenariomenu/begin.png'
 import Back from '../assets/images/icons/scenariomenu/back.png'

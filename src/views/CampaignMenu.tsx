@@ -1,6 +1,6 @@
 // CampaignMenu Component
 import React from 'react';
-import CampaignBackground from '../assets/images/backgroundimages/CampaignMenu.png'
+import CampaignBackground from '../assets/images/backgroundimages/campaign/CampaignMenu.png'
 
 function CampaignMenu() {
   return (
