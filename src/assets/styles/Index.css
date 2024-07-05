@@ -22,10 +22,6 @@ html, body {
   overflow: hidden; /* Prevent scroll bars from appearing */
 }
 
-li {
-  
-}
-
 /* Ensure the #root container maintains aspect ratio and fits within the viewport */
 @media (max-width: 1200px) {
   #root {
