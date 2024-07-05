@@ -1,0 +1,33 @@
+.main-menu-placement {
+    position: absolute; /* Absolute positioning relative to #root */
+    top: 48%; /* Adjust as needed */
+    left: 81%; /* Adjust as needed */
+    width: 30%; /* Adjust as needed */
+    height: 90%;
+    background-color: blueviolet;
+    opacity: 0.75;
+    transform: translate(-50%, -50%); /* Centering the element */
+}
+
+/* .main-back-placement {
+    top: 85%; 
+    left: 81%;
+    width: 30%; 
+    height: 20%;
+    background-color: lightcoral;
+    opacity: 0.75;
+    transform: translate(-50%, -50%); 
+} */
+
+ul.main-menu-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+li {
+    display: block;
+    background-color: blue;
+}
