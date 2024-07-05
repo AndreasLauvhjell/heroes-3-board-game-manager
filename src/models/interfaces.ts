@@ -1,3 +1,16 @@
+import { ReactNode } from "react";
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export interface BackgroundContextType {
+  background: string;
+  setBackground: React.Dispatch<React.SetStateAction<string>>;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export interface BackgroundProviderProps {
+  children: ReactNode;
+}
+
 interface Event {
     roundNum: number;
     title: string;

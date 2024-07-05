@@ -1,4 +1,3 @@
-// CampaignMenu Component
 import React from 'react';
 import MenuBackground from '../assets/images/backgroundimages/main/MainMenu.gif'
 

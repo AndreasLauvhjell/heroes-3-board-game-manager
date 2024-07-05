@@ -1,4 +1,4 @@
-import ButtonClick from '../assets/audio/soundEffects/global/BUTTON.mp3'
+import ButtonClick from '../../assets/audio/soundEffects/global/BUTTON.mp3'
 
 interface BtnProps {
     imgSource?: string;

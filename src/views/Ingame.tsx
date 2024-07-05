@@ -1,8 +1,7 @@
-// CampaignMenu Component
 import React from 'react';
 import IngameBackground from '../assets/images/backgroundimages/ingame/ingame.png'
 import IngameMenu from '../assets/images/icons/ingame/IngameMenu.png'
-import Btn from '../components/Button';
+import Btn from '../components/buttons/Button';
 import { useNavigate } from 'react-router-dom';
 
 

@@ -1,31 +1,23 @@
-import React, { useState } from 'react';
-import MenuList from "../components/MenuList";
-import MenuBackground from '../assets/images/backgroundimages/main/MainMenu.gif';
+import React, { useEffect } from 'react';
+import { useBackground } from '../services/contexts/BackgroundContext';
+import MainMenuBackground from '../assets/images/backgroundimages/main/MainMenu.png';
+import MainMenuList from '../components/buttons/buttonlists/MainMenuList';
 import MainTheme from '../assets/audio/music/00maintheme.mp3';
-import Btn from '../components/Button';
-import '../assets/styles/MainMenu.css';
+import Btn from '../components/buttons/Button';
 
 import Modal from '../components/Modal';
 import '../assets/styles/Modal.css'
 
-import IngameMenu from '../assets/images/icons/ingame/IngameMenu.png';
 
 function MainMenu() {
-  const [isModalVisible, setModalVisible] = useState(true);
+  const { setBackground } = useBackground();
 
-  const toggleModal = () => {
-    setModalVisible(!isModalVisible);
-  };
+  useEffect(() => {
+    setBackground(MainMenuBackground);
+  }, [setBackground]);
 
   return (
-    <>
-      <img src={MenuBackground} alt="Background" className="background-image" />
-      <div className='main-menu'>
-        <div className='menu-container'>
-          <MenuList />
-        </div>
-      </div>
-    </>
+    <MainMenuList />
   );
 }
 

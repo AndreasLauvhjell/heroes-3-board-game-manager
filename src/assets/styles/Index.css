@@ -1,3 +1,8 @@
+/* Remove the .background-image class as it's no longer needed */
+.background-image {
+  display: none;
+}
+
 /* index.css */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -14,42 +19,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body, #root {
-  margin: 0;
+html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scroll bars from appearing */
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 320px;
-  background-color: #242424;
+ul {
+  background-color: red;
 }
 
-.navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+li {
+  display: block;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 100%;
-  align-items: center;
-  position: relative; /* Necessary for positioning elements inside it */
+/* Ensure the #root container maintains aspect ratio and fits within the viewport */
+@media (max-width: 1200px) {
+  #root {
+    width: 100%;
+    height: auto;
+  }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-
-
+@media (max-height: 900px) {
+  #root {
+    height: 100%;
+    width: auto;
+  }
 }
 
-@media (max-width: 480px) {
-
+/* Additional media query to maintain aspect ratio */
+@media (max-aspect-ratio: 4/3) {
+  #root {
+    height: 75vw; /* 4:3 aspect ratio */
+    width: 100vw;
+  }
 }

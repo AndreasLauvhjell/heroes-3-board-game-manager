@@ -6,8 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <App />
-    </div>
   </React.StrictMode>,
 )

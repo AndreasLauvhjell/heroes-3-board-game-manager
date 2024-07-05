@@ -1,6 +1,17 @@
-/* App.css */
 #root {
   max-width: 1200px;
+  max-height: 900px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgreen;
+  box-sizing: border-box;
+  background-image: url('../images/backgroundimages/main/MainMenu.gif');
+  background-size: contain; /* Ensure the image maintains its aspect ratio */
+  background-position: center;
+  background-repeat: no-repeat;
 }

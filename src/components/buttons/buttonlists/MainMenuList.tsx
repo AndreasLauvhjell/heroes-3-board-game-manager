@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 
-import Singleplayer from '../assets/images/icons/mainmenu/Singleplayer.png';
-import Scenario from '../assets/images/icons/mainmenu/Scenario.png';
-import Campaign from '../assets/images/icons/mainmenu/Campaign.png';
+import Singleplayer from '../../../assets/images/icons/mainmenu/Singleplayer.png';
+import Scenario from '../../../assets/images/icons/mainmenu/Scenario.png';
+import Campaign from '../../../assets/images/icons/mainmenu/Campaign.png';
 
-import RoE from '../assets/images/icons/campaignmenu/roe.png';
-import AB from '../assets/images/icons/campaignmenu/ab.png';
-import SoD from '../assets/images/icons/campaignmenu/sod.png';
+import RoE from '../../../assets/images/icons/campaignmenu/roe.png';
+import AB from '../../../assets/images/icons/campaignmenu/ab.png';
+import SoD from '../../../assets/images/icons/campaignmenu/sod.png';
 
-import Multiplayer from '../assets/images/icons/mainmenu/Multiplayer.png';
+import Multiplayer from '../../../assets/images/icons/mainmenu/Multiplayer.png';
 
-import Back from '../assets/images/icons/mainmenu/Back.png';
-import Quit from '../assets/images/icons/mainmenu/Quit.png';
+import Back from '../../../assets/images/icons/mainmenu/Back.png';
+import Quit from '../../../assets/images/icons/mainmenu/Quit.png';
 
 import { useNavigate } from 'react-router-dom';
-import Btn from './Button';
+import Btn from '../Button';
 
 const initialMenu = [
   { id: 'singleplayer', img: Singleplayer, alt: 'Singleplayer' },
@@ -53,7 +53,7 @@ function MenuList() {
   };
 
   return (
-    <ul className="menu-list">
+    <ul className="main-menu-list">
       {menuItems.map((item) => (
         <li key={item.id}>
           <Btn 
