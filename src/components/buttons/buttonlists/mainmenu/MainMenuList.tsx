@@ -53,18 +53,30 @@ function MenuList() {
   };
 
   return (
-    <ul className="main-menu-content">
-      {menuItems.map((item) => (
-        <li key={item.id}>
+    <>
+      <ul className="main-menu-top-content">
+        {menuItems.map((item) => (
+          <li key={item.id}>
+            <Btn 
+              imgSource={item.img } 
+              id ={item.id }
+              href={item.href} 
+              onClick={handleButtonClick} 
+            />
+          </li>
+        ))}
+      </ul>
+
+      <ul className="main-menu-bottom-content">
+      
+        <li >
           <Btn 
-            imgSource={item.img } 
-            id ={item.id }
-            href={item.href} 
+            imgSource={ Back }
             onClick={handleButtonClick} 
           />
         </li>
-      ))}
-    </ul>
+      </ul>
+    </>
   );
 }
 

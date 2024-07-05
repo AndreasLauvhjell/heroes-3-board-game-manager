@@ -20,8 +20,7 @@ function MainMenu() {
   return (
     <>
       <div className="main-menu-placement">
-        <p>here</p>
-        {/* <MainMenuList /> */}
+        <MainMenuList />
       </div>
     </>
   );
